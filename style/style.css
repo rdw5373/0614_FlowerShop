@@ -1,0 +1,188 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+
+/* Reset */
+
+* {
+
+    color: #222;
+    font-family: 'Nanum Gothic', sans-serif;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fff;
+}
+
+a:link {
+    color: #555;
+}
+
+a:visited {
+    color: #555;
+}
+
+a:hover {
+    color: #555;
+}
+
+a:active {
+    color: #555;
+}
+
+
+img {
+    vertical-align: middle;
+}
+
+ul {
+    list-style: none;
+}
+
+.flexContainer {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+}
+
+/* Reset */
+
+
+/* 배경이미지 적용 */
+div#outerWrap {
+    width: 100%;
+    height: 100%;
+
+    background-image: url(../images/background.png);
+    background-repeat: no-repeat;
+    /* 이미지 반복x */
+    /* repeat 속성으로 배경이미지 크기조절 안됨 */
+    background-size: cover;
+
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: -1;
+
+}
+
+/* 배경이미지 적용 */
+
+
+/* 가이드라인 */
+div#wrap {border: 1px solid #000;}
+header#header {border: 1px solid #000;}
+nav#gnb {border: 1px solid #000;}
+main#main {border: 1px solid #000;}
+div#contents {border: 1px solid #000;}
+footer#footer {border: 1px solid #000;}
+/* 가이드라인 끝 */
+
+
+/* div#wrap */
+div#wrap {
+    width: 1060px;
+    margin: 0 auto;
+
+    background-color: #fff;
+
+}
+
+/* div#wrap 끝 */
+
+
+/* header#header */
+header#header {
+    width: 1060px;
+    height: 195px;
+}
+/* header#header 끝 */
+
+
+/* nav#gnb */
+nav#gnb {
+    padding-left: 40px;
+    background-color: #c51a3a;
+}
+
+#gnb a {
+    color: #fff;
+    font-size: 16px;
+    padding: 14px 10px; /*공간*/
+
+    display: inline-block;
+}
+
+#gnb a:hover { /* 작업 지시사항 1번 */
+                         /*gnb메뉴에 마우스올렸을때 변화*/
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.04);
+}
+/* nav#gnb끝 */
+
+
+/* main#main */
+div#shopImg {
+    padding: 20px; /*메인이미지 왼쪽 공간*/
+}
+
+div#greetingMsg {
+    padding: 50px 44px; /*메인글귀 공간*/
+}
+
+#greetingMsg h2 {
+    padding-left: 20px;
+    margin-bottom: 26px; /*제목 밑 공간*/
+}
+
+#greetingMsg p {
+    color: #d17145;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 30px;
+}
+
+/* main#main끝 */
+
+
+/* div#contents */
+
+/* div#contents끝 */
+
+
+/* footer#footer */
+
+/* footer#footer끝 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
