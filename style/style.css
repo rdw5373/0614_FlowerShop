@@ -5,7 +5,6 @@
 /* Reset */
 
 * {
-
     color: #222;
     font-family: 'Nanum Gothic', sans-serif;
     text-decoration: none;
@@ -17,7 +16,15 @@
 }
 
 body {
-    background-color: #fff;
+
+    background-image: url(../images/background.png);
+    background-repeat: no-repeat;
+    /* 이미지 반복x */
+    /* repeat 속성으로 배경이미지 크기조절 안됨 */
+
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    /*배경이미지를 전체화면에 채워줌*/
 }
 
 a:link {
@@ -57,15 +64,12 @@ ul {
 
 
 /* 배경이미지 적용 */
+/*
 div#outerWrap {
     width: 100%;
     height: 100%;
 
-    background-image: url(../images/background.png);
-    background-repeat: no-repeat;
-    /* 이미지 반복x */
-    /* repeat 속성으로 배경이미지 크기조절 안됨 */
-    background-size: cover;
+
 
     position: fixed;
     left: 0;
@@ -73,17 +77,18 @@ div#outerWrap {
     z-index: -1;
 
 }
+*/
 
 /* 배경이미지 적용 */
 
 
 /* 가이드라인 */
-div#wrap {border: 1px solid #000;}
-header#header {border: 1px solid #000;}
-nav#gnb {border: 1px solid #000;}
-main#main {border: 1px solid #000;}
-div#contents {border: 1px solid #000;}
-footer#footer {border: 1px solid #000;}
+/*div#wrap {border: 1px solid #000;}*/
+/*header#header {border: 1px solid #000;}*/
+/*nav#gnb {border: 1px solid #000;}*/
+/*main#main {border: 1px solid #000;}*/
+/*div#contents {border: 1px solid #000;}*/
+/*footer#footer {border: 1px solid #000;}*/
 /* 가이드라인 끝 */
 
 
@@ -104,6 +109,7 @@ header#header {
     width: 1060px;
     height: 195px;
 }
+
 /* header#header 끝 */
 
 
@@ -116,36 +122,42 @@ nav#gnb {
 #gnb a {
     color: #fff;
     font-size: 16px;
-    padding: 14px 10px; /*공간*/
+    padding: 14px 10px;
+    /*공간*/
 
     display: inline-block;
 }
 
-#gnb a:hover { /* 작업 지시사항 1번 */
-                         /*gnb메뉴에 마우스올렸을때 변화*/
+#gnb a:hover {
+    /* 작업 지시사항 1번 */
+    /*gnb메뉴에 마우스올렸을때 변화*/
     color: rgba(255, 255, 255, 0.8);
     font-weight: bold;
     background-color: rgba(255, 255, 255, 0.04);
 }
+
 /* nav#gnb끝 */
 
 
 /* main#main */
 div#shopImg {
-    padding: 20px; /*메인이미지 왼쪽 공간*/
+    padding: 20px;
+    /*메인이미지 왼쪽 공간*/
 }
 
 div#greetingMsg {
-    padding: 50px 44px; /*메인글귀 공간*/
+    padding: 50px 44px;
+    /*메인글귀 공간*/
 }
 
 #greetingMsg h2 {
     padding-left: 20px;
-    margin-bottom: 26px; /*제목 밑 공간*/
+    margin-bottom: 26px;
+    /*제목 밑 공간*/
 }
 
 #greetingMsg p {
-    color: #d17145;
+    color: #d86539;
     font-size: 20px;
     font-weight: bold;
     line-height: 30px;
@@ -155,34 +167,119 @@ div#greetingMsg {
 
 
 /* div#contents */
+div#contents {
+    justify-content: space-around;
+    /*대상 요소들간의 공간을
+    균등하게 나누어 배치 */
+}
+
+div#contents > div {
+    width: 250px;
+    height: 210px;
+}
+
+/*첫번째 제외*/
+#contents > div:not(:first-child) {
+    border: 1px dotted #000;
+    /* 점선 */
+    border-radius: 10px;
+    /*모서리 둥글게*/
+    background-repeat: no-repeat;
+    -webkit-background-size: 150px 210px;
+    background-size: 150px 210px;
+}
+
+#contents > div:first-child {
+    padding: 20px 0;
+}
+
+#contents > div:first-child > h3 {
+    color: #fff;
+    padding: 10px;
+    background-color: #e76c6e;
+}
+
+#contents > div:first-child > ul {
+    line-height: 24px;
+    list-style-type: square;
+    list-style-position: inside;
+    padding: 20px 0 0 14px;
+}
+
+#contents > div:first-child span {
+    font-weight: bold;
+    margin-right: 6px;
+}
+
+
+#contents > div:nth-child(2) {
+    background-image: url(../images/bg1.png);
+
+}
+
+#contents > div:nth-child(3) {
+    background-image: url(../images/bg2.png);
+
+}
+
+#contents > div:nth-child(4) {
+    background-image: url(../images/bg3.png);
+
+}
+
+#contents div.flowerTitle {
+    height: 70px;
+    text-align: right;
+    padding-right: 20px;
+    background-color: rgba(255, 255, 255, 0.6);
+
+    position: relative;
+    top: 128px;
+}
+
+#contents div.flowerTitle h2 {
+    color: #8a4069;
+}
+
+#contents div.flowerTitle h4 {
+    color: #326cd8;
+    margin-top: 20px;
+}
 
 /* div#contents끝 */
 
+hr {
+    margin-top: 20px;
+}
+
 
 /* footer#footer */
+footer#footer {
+    justify-content: space-between;
+}
+
+footer#footer nav#footerGNB {
+    padding-left: 40px;
+}
+
+footer#footer li {
+    height: 60px;
+    font-size: 14px;
+    line-height: 60px;
+    padding: 0 12px;
+}
+
+footer#footer li:hover {
+    /*작업지시사항 2번 */
+    color: rgba(34, 34, 34, 0.9);
+    font-weight: bold;
+}
+
+#footer div#copyright {
+    height: 60px;
+    font-size: 14px;
+    line-height: 60px;
+    padding-right: 30px;
+}
 
 /* footer#footer끝 */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
